@@ -13,15 +13,16 @@ public class EmployeeConfig {
 
     @Bean
     public Employee getDetails(){
-        Employee employee = new Employee();
-        employee.setEmpId("12");
-        employee.setEmpName("meshach");
-        employee.setEmpAddress("NewYork");
+        Employee employee = new Employee("Meshach","NewYork","12",new Department("Mechanical","12","process"));
+//        employee.setEmpId("12");
+//        employee.setEmpName("meshach");
+//        employee.setEmpAddress("NewYork");
+
         return employee;
     }
 
-    @Bean
-    public Department getDetails1(){
-        return new Department("Mechanical","12","Process");
-    }
+//    @Bean
+//    public Department getDetails1(){
+//        return new Department("Mechanical","12","Process");
+//    }
 }
