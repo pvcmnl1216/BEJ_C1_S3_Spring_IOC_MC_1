@@ -5,19 +5,26 @@
  */
 package org.niit.Domin;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Employee {
 
     private String empName;
-    private String empId;
     private String empAddress;
+    private String empId;
+
+    private Department department;
 
     public Employee() {
     }
 
-    public Employee(String empName, String empId, String empAddress) {
+    @Autowired
+    public Employee(String empName, String empAddress, String empId, Department department) {
         this.empName = empName;
-        this.empId = empId;
         this.empAddress = empAddress;
+        this.empId = empId;
+        this.department = department;
     }
 
     public String getEmpName() {
@@ -28,14 +35,6 @@ public class Employee {
         this.empName = empName;
     }
 
-    public String getEmpId() {
-        return empId;
-    }
-
-    public void setEmpId(String empId) {
-        this.empId = empId;
-    }
-
     public String getEmpAddress() {
         return empAddress;
     }
@@ -44,12 +43,24 @@ public class Employee {
         this.empAddress = empAddress;
     }
 
+    public String getEmpId() {
+        return empId;
+    }
+
+    public void setEmpId(String empId) {
+        this.empId = empId;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" +
-                "empName='" + empName + '\'' +
-                ", empId='" + empId + '\'' +
-                ", empAddress='" + empAddress + '\'' +
-                '}';
+        return "Employee{" + "empName='" + empName + '\'' + ", empAddress='" + empAddress + '\'' + ", empId='" + empId + '\'' + ", department=" + department + '}';
     }
 }
