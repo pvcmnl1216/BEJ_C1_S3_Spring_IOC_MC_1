@@ -6,4 +6,18 @@
 package org.niit.Domin;
 
 public class Department {
+    private String deptName;
+    private String deptId;
+    private String deptRole;
+
+    public Department() {
+    }
+
+    public Department(String deptName, String deptId, String deptRole) {
+        this.deptName = deptName;
+        this.deptId = deptId;
+        this.deptRole = deptRole;
+    }
+
+
 }
