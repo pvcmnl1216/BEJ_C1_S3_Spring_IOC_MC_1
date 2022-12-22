@@ -11,5 +11,12 @@ public class Employee {
     private String empId;
     private String empAddress;
 
+    public Employee() {
+    }
 
+    public Employee(String empName, String empId, String empAddress) {
+        this.empName = empName;
+        this.empId = empId;
+        this.empAddress = empAddress;
+    }
 }
