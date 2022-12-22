@@ -19,5 +19,36 @@ public class Department {
         this.deptRole = deptRole;
     }
 
+    public String getDeptName() {
+        return deptName;
+    }
 
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
+    }
+
+    public String getDeptId() {
+        return deptId;
+    }
+
+    public void setDeptId(String deptId) {
+        this.deptId = deptId;
+    }
+
+    public String getDeptRole() {
+        return deptRole;
+    }
+
+    public void setDeptRole(String deptRole) {
+        this.deptRole = deptRole;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "deptName='" + deptName + '\'' +
+                ", deptId='" + deptId + '\'' +
+                ", deptRole='" + deptRole + '\'' +
+                '}';
+    }
 }
